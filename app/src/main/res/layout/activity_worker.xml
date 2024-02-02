@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkerActivity">
+
+    <include
+        android:id="@+id/studentToolBar"
+        layout="@layout/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/workerLinearLayout"
+        android:layout_width="250dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/workerPendingRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentToolBar">
+
+        <Button
+            android:id="@+id/pendingBtnWorker"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/abhaya_libre"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:hapticFeedbackEnabled="false"
+            android:text="@string/pending"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHint="#616161"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/completedBtnWorker"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@string/completed"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="#616161"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workerPendingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentToolBar"
+        app:layout_constraintVertical_bias="0.738" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workerCompletedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/workerPendingRecyclerView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

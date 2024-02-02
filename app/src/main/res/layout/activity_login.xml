@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="178dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:fontFamily="@font/abhaya_libre"
+        android:textColor="@color/colorPrimary"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/logUser"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/custom_edit_text_view"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#616161"
+        app:drawableStartCompat="@drawable/custom_mail_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/logPass"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:paddingEnd="12dp"
+        android:paddingStart="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:passwordToggleEnabled="true"
+        android:fontFamily="@font/abhaya_libre"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:drawableStartCompat="@drawable/custom_vpn_icon"
+        android:background="@drawable/custom_edit_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/logUser"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/SignIn"
+        android:background="@drawable/round_button"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logPass" />
+
+    <TextView
+        android:id="@+id/notAuser"
+        android:layout_width="173dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/abhaya_libre"
+        android:gravity="center"
+        android:text="@string/notAUser"
+        android:textAlignment="center"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentActivity">
+
+    <include
+        android:id="@+id/studentToolBar"
+        layout="@layout/app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:baselineAlignBottom="false"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/servo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="250dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/completedRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentToolBar">
+
+        <Button
+            android:id="@+id/pendingBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/abhaya_libre"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:hapticFeedbackEnabled="false"
+            android:text="@string/pending"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHint="#616161"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/completedBtn"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@string/completed"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorPrimary"
+            android:textColorHint="#616161"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentPendingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/completedRecyclerView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentToolBar"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="32.5dp"
+        android:background="@drawable/custom_border2"
+        android:gravity="center_vertical"
+        android:paddingStart="40dp"
+        android:paddingEnd="30dp"
+        android:text="@string/addNewComplain"
+        android:fontFamily="@font/abhaya_libre"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
